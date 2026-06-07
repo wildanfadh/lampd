@@ -20,7 +20,8 @@ jobs:
 
       - run: npm ci
       - run: npm run lint
-      - run: npm run build
+      - run: npx tsc --noEmit -p tsconfig.app.json
+      - run: npx vite build
 
   rust:
     name: Rust (build)
